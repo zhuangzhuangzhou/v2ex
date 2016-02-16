@@ -98,7 +98,7 @@
 }
 
 
-#pragma mark - Status bar touch tracking
+#pragma mark - Status bar touch tracking 状态栏触摸跟踪
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     CGPoint location = [[[event allTouches] anyObject] locationInView:[self window]];
@@ -108,5 +108,7 @@
                                                             object:nil];
     }
 }
+
+
 
 @end

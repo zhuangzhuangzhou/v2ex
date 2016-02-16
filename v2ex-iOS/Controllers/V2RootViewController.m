@@ -28,12 +28,12 @@ static CGFloat const kMenuWidth = 240.0;
 
 @interface V2RootViewController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, strong) V2LatestViewController       *latestViewController;
-@property (nonatomic, strong) V2CategoriesViewController   *categoriesViewController;
-@property (nonatomic, strong) V2NodesViewController        *nodesViewController;
-@property (nonatomic, strong) V2CategoriesViewController     *favouriteViewController;
-@property (nonatomic, strong) V2NotificationViewController *notificationViewController;
-@property (nonatomic, strong) V2ProfileViewController      *profileViewController;
+@property (nonatomic, strong) V2LatestViewController       *latestViewController;//最新
+@property (nonatomic, strong) V2CategoriesViewController   *categoriesViewController;//分类
+@property (nonatomic, strong) V2NodesViewController        *nodesViewController;//节点
+@property (nonatomic, strong) V2CategoriesViewController     *favouriteViewController;//收藏
+@property (nonatomic, strong) V2NotificationViewController *notificationViewController;//提醒
+@property (nonatomic, strong) V2ProfileViewController      *profileViewController;//个人
 
 @property (nonatomic, strong) SCNavigationController       *latestNavigationController;
 @property (nonatomic, strong) SCNavigationController       *categoriesNavigationController;
@@ -86,12 +86,12 @@ static CGFloat const kMenuWidth = 240.0;
     [self configureNotifications];
     
     
-//    [UINavigationBar appearance].tintColor = [UIColor blackColor];
-//    [UINavigationBar appearance].titleTextAttributes = @{
-//                                                         NSForegroundColorAttributeName:[UIColor blackColor],
-//                                                         NSFontAttributeName:[UIFont systemFontOfSize:17]};
+    [UINavigationBar appearance].tintColor = [UIColor blackColor];
+    [UINavigationBar appearance].titleTextAttributes = @{
+                                                         NSForegroundColorAttributeName:[UIColor blackColor],
+                                                         NSFontAttributeName:[UIFont systemFontOfSize:17]};
     self.edgesForExtendedLayout = UIRectEdgeAll;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     
     
 }
